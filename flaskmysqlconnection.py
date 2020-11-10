@@ -12,7 +12,7 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 @app.route('/')
-def index():
+def getallUsers():
   output = []
   mycursor.execute("select * from users")
   data=mycursor.fetchall()
